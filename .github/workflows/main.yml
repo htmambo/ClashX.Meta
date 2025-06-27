@@ -56,7 +56,7 @@ jobs:
 
     - name: build
       run: |
-        xcodebuild archive -project ClashX.xcodeproj -scheme ClashX\ Meta -archivePath archive/ClashX.xcarchive -showBuildTimingSummary -allowProvisioningUpdates
+        xcodebuild archive -project ClashX.xcodeproj -scheme ClashX\ Meta -archivePath archive/ClashX.xcarchive -showBuildTimingSummary
 
     - name: create zip
       run: ditto -c -k --sequesterRsrc --keepParent archive/ClashX.xcarchive/Products/Applications/ClashX\ Meta.app "ClashX Meta.zip"
